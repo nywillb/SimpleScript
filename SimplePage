@@ -1,9 +1,9 @@
 #!/bin/bash
 
-CONFIG="SimpleScriptConfig.simpleconfig"
+CONFIG="BasePage.simpleconfig"
 echo Welcome, $user!
-echo This is the SimpleScript Page Maker! This script will create a page that is not the home page.
-echo What would you like to name your page?
+echo This is the SimpleScript Page Maker! This script will create a page that is not the home page. To use this script, you must be in the home directory of your project. Press Control+C to abort.
+echo What would you like to name your page? (The name should be all lowercase and cannot be home)
 read name
 echo Awesome! I will make a new page named $name.
 mkdir $name
@@ -14,3 +14,4 @@ cat "./index.html" >> "$CONFIG"
 echo "Created index.html (You don't have to worry about this)"
 echo Added Simple Script!
 echo You are ready to go!
+cd ..

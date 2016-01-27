@@ -1,0 +1,17 @@
+#!/bin/bash
+
+CONFIG="SimpleHome.simpleconfig"
+echo Welcome, $user!
+echo This is the SimpleScript Home Page Maker! This script will create a home page!
+echo What would you like to name your page?
+read name
+echo Awesome! I will make a new page named $name.
+mkdir $name
+cd $name
+touch index.html
+touch index.simple
+cat "./index.html" >> "$CONFIG"
+echo "Created index.html (You don't have to worry about this)"
+echo Added Simple Script!
+echo You are ready to go!
+cd ..
