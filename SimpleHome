@@ -2,10 +2,11 @@
 
 CONFIG="SimpleHome.simpleconfig"
 echo Welcome, $user!
-echo This is the SimpleScript Home Page Maker! This script will create a home page!
-echo What would you like to name your page?
-read name
-echo Awesome! I will make a new page named $name.
+echo This is the SimpleScript Home Page Maker! This script will create a home page or override your existing home page with a blank one!
+echo Make sure that you are in the Home Directory for your project/
+echo Press enter to continue, or press control+c to abort
+read consent
+echo Awesome! I will make a new home page.
 mkdir $name
 cd $name
 touch index.html
